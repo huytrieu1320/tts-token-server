@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 app.get("/token", async (req, res) => {
   try {
     // Đường dẫn bí mật nơi bạn upload file key trong Render
-    const keyFile = "service_account.json";
+    const keyFile = "/etc/secrets/service_account.json";
     const auth = new GoogleAuth({
       keyFile,
       scopes: ["https://www.googleapis.com/auth/cloud-platform"],
