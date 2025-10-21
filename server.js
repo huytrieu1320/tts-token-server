@@ -10,7 +10,7 @@ app.get("/token", async (req, res) => {
     const keyFile = "/etc/secrets/service_account.json";
     const auth = new GoogleAuth({
       keyFile,
-      scopes: ["https://www.googleapis.com/auth/cloud-platform"],
+      scopes: ["https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/generative-language.retriever"],
     });
 
     const client = await auth.getClient();
