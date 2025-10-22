@@ -26,7 +26,7 @@ app.post("/token", async (req, res) => {
     const ACCESS_KEY = getAccessKey();
 
     if (!ACCESS_KEY) {
-      return res.status(500).json({ error: "Server key missing" });
+      return res.status(500).json({ error: ACCESS_KEY });
     }
 
     // So sánh token client gửi với token trong file
